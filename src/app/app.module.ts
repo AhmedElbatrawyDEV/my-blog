@@ -1,8 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { CoreModule  } from "./core/core.module";
+import { SharedModule  } from "./shared/shared.module";
+import { ContactModule  } from "./contact/contact.module";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ScullyLibModule } from '@scullyio/ng-lib';
 
 @NgModule({
   declarations: [
@@ -10,7 +13,11 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CoreModule,
+    SharedModule,
+    ContactModule,
+    ScullyLibModule
   ],
   providers: [],
   bootstrap: [AppComponent]
